@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta chareset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name "viewport" content "width-device-width, initial-scale=1.0"
+        <title>Document</title>
+    </head>
+
+    <body>
+        <form acton=""method="GET">
+            <input type="number" name="liczba1" placeholder="podaj liczbe1" />
+            <input type="number" name="liczba2" placeholder="podaj liczbe2" />
+            <button type= "submit"></button>
+        </form>
+        <div class="srednia"></div>
+
+        <script>
+            const form = document.querySelector('form');
+            const div = document.querySelector('.srednia');
+
+            form.addEventListener('submit', ()=>{
+                e.preventDefault();
+                const poczatek = parseInt(document.querySelector('input[name="liczba1"]')
+                value);
+                const iloscliczb = document.querySelector('input[name="liczba2"]')
+                value*1;
+                let suma = 0;
+
+                for(let i = poczatek; i<= poczatek+iloscliczb; i++){
+                    suma += i;
+                }
+                
+                div.textContent = `srednia ${iloscliczb} liczb zaczynajacod liczby ${poczatek} 
+                jest rowna ${(suma/iloscliczb).toFixed(2)}`;
+                
+            })
+        </script>
+        </body>
+</html>
