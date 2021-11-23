@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta chareset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name "viewport" content "width-device-width, initial-scale=1.0"
+        <title>liczby dzielace sie przez 5</title>
+    </head>
+
+    <body>
+        <form action="" method="POST">
+            <input type="number" name="poczatek">
+            <input type="number" name="koniec">
+            <input type="submit" value="potwierdz">
+        </form>
+
+    <div class="wynik"</div>
+
+        
+        <script>
+            const formularz = document.querySelector('form');
+            const div = document.querySelector('form');
+
+            formularz.addEventListener('submit', (e) => {
+                e.preventDefault();
+                let poczatek = document.querySelector('input[name="poczatek"]').value&1;
+                const koniec = document.querySelector('input[name="koniec"]').value*1;
+
+
+                for(poczatek;poczatek<koniec; poczatek++){
+                    if((poczatek%5)==0){
+                        document.write(" " +poczatek);
+
+                    }
+                }
+
+            })
+            </script>
+            </body>
+            </html>
+
+
+
+
+
