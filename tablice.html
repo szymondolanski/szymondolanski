@@ -7,12 +7,49 @@
         <title>Tablice</title>
     </head>
     <body>
+        <div class = "Tablica"></div>
+        <div class = "Suma"></div>
+        <div class = "ileZer"></div>
+        <input type= "number" name="liczba" />
+        <button>Ile razy</button>
+        <div class="ileLiczba"></div>
         <script>
+           
+            function getRandomIntInclusive(min,max){
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                return Math.floor(Math.rando() * (max - min + 1));
+            }
+            const divTablica = document.querySelector('.Tablica');
+            const divSuma = document.querySelector('.Suma');
             const liczby= [];
+            let suma = 0;
+            let ileZer = 0;
             for(let i=0; i<100;i++){
                 liczby[i] =Math.round( Math.random()*100);
             }
-            document.write(liczby.join(','));
+            liczby[i] = getRandomIntInclusive(0){
+            suma += liczby[i];
+        }
+        for (const liczba of liczby) {
+            if(liczba == 0) ileZer++;
+        }
+        divTablica.textContent = liczby.join(', ')
+        divSuma.textContent = 'Suma wynosi: ' + suma;
+        divileZer.textContent = 'ilosczer w tablicy' + ileZer;
+
+
+        const btn = document.querySelector('button');
+        const divIleLiczba = document.querySelector('ileLiczba');
+        let = ileLiczba = 0;
+        btn.addEventListener('click', ()=>{
+            const liczba= document.querySelector('input [name="liczba"]').value;
+
+            for (const l of liczby) {
+            if(l == liczba) ileLiczba++;
+        }
+        divIleLiczba = `Liczba ${liczba} w tablicy wystepuje${ileLiczba} razy`;
+        });
         </script>
     </body>
 
