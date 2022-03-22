@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .naglowek{
+            color: orange;
+
+        }
+        .div{
+            font-size: 40px;
+            color: blue;
+        }
+        .p1{
+            text-decoration: underline;
+        }
+        span{
+            font-weight: bold;
+            color: cadetblue;
+        }
+        .zmiana{
+            background-color: rgb(105, 4, 126);
+            color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1  class="naglowek">To jest naglowek </h1>
+    <div class="div">Tresc diva</div>
+    <p class="p1">Tresc akapitu 1</p>
+    <p class="p2">Tresc akapitu 2</p>
+
+    <script>
+        const h1 = document.querySelector('h1.naglowek');
+        const div = document.querySelector('div.div');
+        const akapity = document.querySelectorAll('p');
+
+        akapity[0].textContent += ' no witam witam co jest grane';
+        h1.textContent = 'JavaScript';
+        div.style.fontFamily = 'Courier New';
+
+        div.classList.add('zmiana');
+        const h2 = document.createElement('h2');
+        h2.textContent = 'Aplikacje internetowe';
+        akapity[1].appendChild(h2);
+        h1.remove();
+    </script>
+
+    
+</body>
+</html>
