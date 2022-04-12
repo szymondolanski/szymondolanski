@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: flex;
+            justify-content: space-between;
+            width: 350px;
+            margin: 10px 0;
+        }
+        span.error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form  action="">
+        <div>
+            <label>Wpisz kolor czerwony: </label>
+        <input type="number" name="red" />
+        </div>
+        <span class="error"></span>
+        <div>
+            <label>Wpisz kolor zielony: </label>
+            <input type="number" name="green" />
+        </div>
+        <span class="error"></span>
+        <div>
+            <label>Wpisz kolor niebieski: </label>
+            <input type="number" name="blue" />
+        </div>
+        <span class="error"></span>
+            <input type="submit" value="Zmien kolor tla" />
+    </form>
+    <script>    
+    //pobieramy  formularz
+        const formularz = document.querySelector('form');
+        const czerwony = document.querySelector('input[name="red"]');
+        const zielony = document.querySelector('input[name="green"]');
+        const niebieski = document.querySelector('input[name="blue"]');
+        //pobieramy elementy, w kotrych bedziemy umieszczac info o bledach
+        const bledy = document.querySelectorAll('span.error');
+
+        //obslugujemy zdarzenie submit(potwierdzenie wysylania) formularza
+        formularz.addEventListener('submit', function(e){
+            e.preventDefault();
+            //zatrzymujemy domyslna akcje formularza
+            //po kliknieciu w przycisk submit wykona sie ponizszy kod
+            //pobieramy wartosci pól wpisane przez uzytkownika
+            const red = czerwony.value;
+            const green = zielony.value;
+            const blue = niebieski.value;
+            //czyszczenie zawartosci elemntow span
+            bledy.forEach((blad) =>{
+                blad.textContent='';
+
+            });
+            //walidacja pól
+            if(red < 0 || red > 255){
+                bledy[0].textContent = "Wpisana liczba musi zawierac sie w przedziale 0-255";
+                return false;
+            }
+            if(green < 0 || green > 255){
+             
+                bledy[1].textContent = "Wpisana liczba musi zawierac sie w przedziale 0-255";
+                return false;
+            }
+            if(blue < 0 || blue > 255){
+                bledy[2].textContent = "Wpisana liczba musi zawierac sie w przedziale 0-255";
+                return false;
+            }
+
+            //zmieniamy kolor tla na podany kolor
+            //odwolujemy sie do znacznika <body> i zmieniamy jemu kolor
+
+            document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
+
+        });
+        
+    </script>
+</body>
+</html>
