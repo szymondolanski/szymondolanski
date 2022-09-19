@@ -1,0 +1,97 @@
+*{
+    padding:0px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+
+.menu{
+background-color:blue;
+display:flex;
+justify-content: center;
+align-items: center;
+height:50px;
+color: white;
+}
+.header{
+    height: 100px;
+background-color:yellow;
+display:flex;
+justify-content: center;
+align-items: center;
+}
+.container{
+    height: 500px;
+    display: flex;
+}
+.sekcja1{
+    height: 100%;
+    width: 25%;
+display:flex;
+justify-content: center;
+align-items: center;
+}
+.sekcja2{
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.sekcja3{
+    width: 25%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer{
+    display:flex;
+justify-content: center;
+align-items: center;
+background-color: red;
+height: 100px;
+}
+.content1{
+    display:flex;
+justify-content: center;
+align-items: center;
+background-color: lightgreen;
+height: 100%;
+width: 100%;
+
+}
+.content2{
+    display:flex;
+justify-content: center;
+align-items: center;
+    background-color:lightblue;
+    height: 33%;
+    width: 100%;
+}
+.content3{
+    display:flex;
+justify-content: center;
+align-items: center;
+    background-color: lightgray;
+    height: 33%;
+    width: 100%;
+}
+.content4{
+    display:flex;
+justify-content: center;
+align-items: center;
+    background-color: rgb(255, 224, 229);
+    height: 34%;
+    width: 100%;
+    
+}
+.content5{
+    display:flex;
+justify-content: center;
+align-items: center;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    color: white;
+    
+}
