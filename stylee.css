@@ -1,0 +1,63 @@
+
+.sciana{
+    background-color: rgb(165, 44, 7);
+    position: absolute;
+    height: 170px;
+    width: 200px;
+    top: 100px;
+    left: 110px;
+}
+.okno1{
+    background-color: black;
+position: absolute;
+min-width: 50px;
+min-height: 40px;
+top: 40px;
+left: 20px;
+z-index: 1;
+}
+.okno2{
+    background-color: black;
+position: absolute;
+min-width: 50px;
+min-height: 40px;
+top: 40px;
+left: 130px;
+}
+.drzwi{
+    background-color: lightskyblue;
+position: absolute;
+top: 100px;
+height: 70px;
+width: 40px;
+left: 60px;
+
+}
+.dach{
+    position: absolute;
+    min-height: 0;
+    min-width: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 100px solid grey;
+    z-index: 1;
+    left: 60px;
+    
+}
+.komin{
+    position: absolute;    
+    background-color: purple;
+    width:20px ;
+    height: 40px;
+    top: 10px;
+    left:240px;
+
+}
+.klamka{
+        background-color: black;
+        position: absolute;
+        width: 10px;
+        height: 5px;
+        top: 40px;
+        left: 30px;
+}
