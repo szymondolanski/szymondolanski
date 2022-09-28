@@ -1,21 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    
 </head>
+<style>
+    *{
+    margin: 0;
+    padding: 0 ;
+    font-family:Arial;
+}
+body{
+   
+    background-color:yellow ;
+}
+    .b{
+        color: yellow;
+    }
+    .c{
+        color: yellow;
+    }
+    .d{
+        color: yellow;
+    }
+    .e{
+        color: yellow;
+    }
+    
+
+@media(max-width: 339px){
+    body{
+        background-color: yellow;
+    }
+    .a{
+        color: black;
+    }
+    .b{
+        color: yellow;
+    }
+    .c{
+        color: yellow;
+    }
+    .d{
+        color: yellow;
+    }
+    .e{
+        color: yellow;
+    }
+}
+@media(min-width: 340px){
+    body{
+        background-color: green;
+    }
+    .a{
+        color: green;
+    }
+    .b{
+        color: black;
+    }
+    .c{
+        color: green;
+    }
+    .d{
+        color: green;
+    }
+    .e{
+        color: green;
+}
+@media(min-width: 578px){
+    body{
+        background-color: blue;
+    }
+    .a{
+        color: blue;
+    }
+    .b{
+        color: blue;
+    }
+    .c{
+        color: black;
+    }
+    .d{
+        color: blue;
+    }
+    .e{
+        color: blue;
+}
+}
+@media(min-width: 1024px){
+    body{
+        background-color: orange;
+    }
+    .a{
+        color: orange;
+    }
+    .b{
+        color: orange;
+    }
+    .c{
+        color: orange;
+    }
+    .d{
+        color: black;
+    }
+    .e{
+        color: orange;
+}
+}
+@media(min-width: 1199px){
+    body{
+        background-color: red;
+    }
+    .a{
+        color: red;
+    }
+    .b{
+        color: red;
+    }
+    .c{
+        color: red;
+    }
+    .d{
+        color: red;
+    }
+    .e{
+        color: black;
+}
+}
+}
+
+</style>
 <body>
-    <section class="header">Header</section>
-    <div class="container">
-        <aside class="aside">aside</aside>
-        <section class="sekcja">
-        <section class="nav">nav</section>
-        <section class="article">article</section> 
-    </section>
-    </div>  
-        <footer class="footer">footer</footer>
+    <div class="a">Ekran ma do 339px i kolor tła żółty</div>
+     <div class="b">Ekran ma między 340px a 577px i kolor tła zielony</div>
+     <div class="c">Ekran ma od 578px do 1023px i kolor tła niebieski</div>
+     <div class="d">Ekran ma od 1024px do 1199px i kolor tła pomarańczowy</div>
+     <div class="e">Ekran ma co najmniej 1200px i kolor tła czewony</div>
 
 </body>
 </html>
