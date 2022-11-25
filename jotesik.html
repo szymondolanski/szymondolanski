@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Produkt</th>
+            <th>Jednostla</th>
+            <th>Dostępna ilość</th>
+            <th>Aktualizacja zamówienia</th>
+            <th>Zamówienie</th>
+        </tr>
+        <tr>
+            <td class="nazwa">Skretka drut</td>
+            <td>metr</td>
+            <td class="braki">0</td>
+            <td><button onclick="aktualizacja(0);"> Aktualizuj</button></td>
+            <td><button onclick="zamowienie(0);">Zamow</button></td>
+        </tr>
+        <tr>
+            <td class="nazwa">Skretka linka</td>
+            <td>Sztuki</td>
+            <td class="braki">2</td>
+            <td><button onclick="aktualizacja(1);">Aktualizuj</button></td>
+            <td><button onclick="zamowienie(1);"> Zamow</button></td>
+        </tr>
+    
+        <tr>
+            <td class="nazwa">Wtyki</td>
+            <td>Sztuki</td>
+            <td class="braki">10</td>
+            <td><button onclick="aktualizacja(2);">Aktualizuj</button></td>
+            <td><button onclick="zamowienie(2);"> Zamow</button></td>
+        </tr>
+        <tr>
+            <td class="nazwa">Moduly</td>
+            <td>Sztuki</td>
+            <td class="braki">30</td>
+            <td><button onclick="aktualizacja(3);">Aktualizuj</button></td>
+            <td><button onclick="zamowienie(3);">Zamow</button></td>
+        </tr>
+    </table>
+    <script>
+        const dostepnailosc = document.querySelectorAll('td.braki');
+        const nazwaproduktu = document.querySelectorAll('td.nazwa');
+        let idZamowiena;
+        const braki = function(){
+            idZamowienia = 0;
+            dostepnailosc.forEach((element) =>{
+               const wartosc = element.textContent;
+                if(wartosc == '0'){
+                    element.style.backgroundColor = 'red';
+
+                }
+                else if(wartosc >=1 && wartosc <= 5){
+                    element.style.backgroundColor = 'yellow';
+                }
+                else{
+                    element.style.backgroundColor = 'honeydew';
+                }
+            });
+        };
+        document.body.onload = braki;
+        braki();
+        const aktualizacja = function(numer){
+            const nowailosc = prompt('Podaj nową ilość');
+            dostepnailosc[numer].textContent = nowailosc;
+            braki();
+        }
+            const zamowienie = function(numer){
+                idZamowienia++;
+                alert(`Zamowienie nr: ${idZamowienia}. Produkt: ${nazwaproduktu[numer].textContent}`);
+            };
+        
+    </script>
+</body>
+</html>
