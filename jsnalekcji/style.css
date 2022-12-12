@@ -1,0 +1,42 @@
+*{
+    margin: 0 auto;
+}
+.baner{
+    background-color:rgb(70,130,180) ;
+    color: white;
+    height: 30px;
+    text-align: center;
+}
+.mejnik{
+    background-color: rgb(176, 196, 222);
+    padding: 50px;
+    text-align: center;
+}
+.lewykont{
+    background-color: rgb(70,130,180);
+    color: white;
+    height: 300px;
+    width: 80%;
+    float: left;
+}
+.prawykont{
+    background-color: rgb(70,130,180);
+    color: white;
+    height: 300px;
+    width: 20%;
+    float: left;
+}
+img{
+    padding-top: 30px;
+    height: 150px;
+}
+footer{
+   background-color: rgb(70,130,180);
+   text-align: center;
+   color: white;
+}
+.zdjeciaaa{
+    border: 1px dashed blue;
+    border-radius: 10px;
+    padding: 3px;
+}
